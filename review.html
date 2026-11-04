@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews | Moonlight Café</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        .review-page {
+            background: #160f0c;
+            color: #f5e8d5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .review-hero {
+            min-height: 52vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(#160f0c88,#160f0cbb),
+            url('https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=1600') center/cover;
+        }
+
+        .review-hero h1 {
+            font-family: 'Playfair Display',serif;
+            font-size: clamp(42px,7vw,75px);
+            color: #e5c28d;
+        }
+
+        .review-hero p {
+            max-width: 650px;
+            line-height: 1.9;
+            margin: 15px auto;
+        }
+
+        .review-container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 85px 25px;
+        }
+
+        .review-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .review-heading h2 {
+            font-family: 'Playfair Display',serif;
+            font-size: 40px;
+            color: #e5c28d;
+        }
+
+        .review-heading p {
+            color: #cbb9a5;
+            margin-top: 12px;
+        }
+
+        .review-summary {
+            text-align: center;
+            padding: 35px;
+            background: #251914;
+            border: 1px solid #59402c;
+            border-radius: 14px;
+            margin-bottom: 45px;
+        }
+
+        .review-summary h3 {
+            font-family: 'Playfair Display',serif;
+            color: #e5c28d;
+            font-size: 30px;
+        }
+
+        .review-stars {
+            color: #e8bb71;
+            letter-spacing: 4px;
+            font-size: 22px;
+            margin: 12px 0;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .review-card {
+            background: #251914;
+            border: 1px solid #59402c;
+            border-radius: 14px;
+            padding: 28px;
+            transition: .3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px);
+            border-color: #e5c28d;
+            box-shadow: 0 12px 25px #0005;
+        }
+
+        .review-profile {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .review-profile img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #c49a65;
+        }
+
+        .review-profile h3 {
+            font-size: 16px;
+            color: #f5e8d5;
+        }
+
+        .review-profile span {
+            font-size: 12px;
+            color: #bda88e;
+        }
+
+        .review-card .review-stars {
+            font-size: 16px;
+        }
+
+        .review-card p {
+            color: #cbb9a5;
+            line-height: 1.9;
+            font-size: 14px;
+        }
+
+        .review-date {
+            display: block;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #9e856b;
+        }
+
+        .review-form-section {
+            background: #21150f;
+            padding: 80px 20px;
+        }
+
+        .review-form-box {
+            max-width: 650px;
+            margin: auto;
+            padding: 35px;
+            background: #251914;
+            border: 1px solid #59402c;
+            border-radius: 15px;
+        }
+
+        .review-form-box h2 {
+            font-family: 'Playfair Display',serif;
+            font-size: 35px;
+            color: #e5c28d;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .review-form-box > p {
+            text-align: center;
+            color: #cbb9a5;
+            margin-bottom: 28px;
+        }
+
+        .review-form-box input,
+        .review-form-box textarea,
+        .review-form-box select {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 18px;
+            background: #160f0c;
+            border: 1px solid #72563b;
+            border-radius: 8px;
+            color: white;
+            font-family: inherit;
+        }
+
+        .review-form-box textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .review-form-box button {
+            width: 100%;
+            padding: 14px;
+            background: #c49a65;
+            color: #160f0c;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .review-form-box button:hover {
+            background: #e5c28d;
+            transform: translateY(-3px);
+        }
+
+        #reviewMessage {
+            color: #e5c28d;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        @media(max-width:850px) {
+            .review-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+        @media(max-width:600px) {
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .review-container {
+                padding: 55px 18px;
+            }
+
+            .review-form-box {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body class="review-page">
+
+<header>
+    <div class="logo">Moonlight <span>Café</span></div>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">Our Story</a>
+        <a href="review.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="reservation.html">Reservations</a>
+    </nav>
+
+    <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
+</header>
+
+<section class="review-hero">
+    <div>
+        <h1>Words From Our Guests</h1>
+        <p>Every smile, every visit and every kind word makes our café special. Here's what our guests have to say.</p>
+    </div>
+</section>
+
+<section class="review-container">
+
+    <div class="review-heading">
+        <h2>Customer Love</h2>
+        <p>Little moments, lovely experiences and beautiful memories.</p>
+    </div>
+
+    <div class="review-summary">
+        <h3>Our Café Experience</h3>
+        <div class="review-stars">★★★★★</div>
+        <p style="color:#cbb9a5;">A collection of sample customer experiences.</p>
+    </div>
+
+    <div class="review-grid" id="reviewGrid">
+
+        <div class="review-card">
+            <div class="review-profile">
+                <img src="https://i.pravatar.cc/100?img=47" alt="Customer avatar">
+                <div>
+                    <h3>Emily R.</h3>
+                    <span>Regular Guest</span>
+                </div>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <p>"Such a lovely café! The atmosphere is peaceful, the interiors are beautiful and the coffee is wonderful."</p>
+            <span class="review-date">A sample review</span>
+        </div>
+
+        <div class="review-card">
+            <div class="review-profile">
+                <img src="https://i.pravatar.cc/100?img=12" alt="Customer avatar">
+                <div>
+                    <h3>Daniel M.</h3>
+                    <span>Coffee Lover</span>
+                </div>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <p>"A perfect place to relax after a busy day. I love the warm lighting and cozy atmosphere."</p>
+            <span class="review-date">A sample review</span>
+        </div>
+
+        <div class="review-card">
+            <div class="review-profile">
+                <img src="https://i.pravatar.cc/100?img=44" alt="Customer avatar">
+                <div>
+                    <h3>Sophia K.</h3>
+                    <span>Happy Guest</span>
+                </div>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <p>"The café has such a beautiful vibe. It's a wonderful place to spend time with friends."</p>
+            <span class="review-date">A sample review</span>
+        </div>
+
+        <div class="review-card">
+            <div class="review-profile">
+                <img src="https://i.pravatar.cc/100?img=11" alt="Customer avatar">
+                <div>
+                    <h3>Arjun S.</h3>
+                    <span>First-Time Guest</span>
+                </div>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <p>"Loved the peaceful environment and the overall experience. Definitely a place I'd like to visit again."</p>
+            <span class="review-date">A sample review</span>
+        </div>
+
+        <div class="review-card">
+            <div class="review-profile">
+                <img src="https://i.pravatar.cc/100?img=49" alt="Customer avatar">
+                <div>
+                    <h3>Olivia P.</h3>
+                    <span>Weekend Guest</span>
+                </div>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <p>"A charming little place with a welcoming feel. I enjoyed every moment of my visit."</p>
+            <span class="review-date">A sample review</span>
+        </div>
+
+        <div class="review-card">
+            <div class="review-profile">
+                <img src="https://i.pravatar.cc/100?img=15" alt="Customer avatar">
+                <div>
+                    <h3>Ryan T.</h3>
+                    <span>Food Lover</span>
+                </div>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <p>"Beautiful design, relaxing music and a lovely coffee experience. Highly enjoyable!"</p>
+            <span class="review-date">A sample review</span>
+        </div>
+
+    </div>
+</section>
+
+<section class="review-form-section">
+    <div class="review-form-box">
+        <h2>Share Your Experience</h2>
+        <p>We would love to hear what you think about Moonlight Café.</p>
+
+        <form id="reviewForm">
+            <input type="text" id="reviewName" placeholder="Your Name" required>
+
+            <select id="reviewRating" required>
+                <option value="">Choose Your Rating</option>
+                <option value="5">★★★★★ - Excellent</option>
+                <option value="4">★★★★☆ - Very Good</option>
+                <option value="3">★★★☆☆ - Good</option>
+                <option value="2">★★☆☆☆ - Fair</option>
+                <option value="1">★☆☆☆☆ - Needs Improvement</option>
+            </select>
+
+            <textarea id="reviewText" placeholder="Write your experience..." required></textarea>
+
+            <button type="submit">Submit Review →</button>
+            <p id="reviewMessage"></p>
+        </form>
+    </div>
+</section>
+
+<footer style="text-align:center;padding:35px;background:#0e0907;color:#c9aa80;">
+    <h2 style="font-family:'Playfair Display',serif;">Moonlight Café ☾</h2>
+    <p>Where every cup feels like home.</p>
+    <p>© 2026 Moonlight Café. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+    document.getElementById('reviewForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('reviewName').value.trim();
+        const rating = Number(document.getElementById('reviewRating').value);
+        const review = document.getElementById('reviewText').value.trim();
+
+        const card = document.createElement('div');
+        card.className = 'review-card';
+
+        const profile = document.createElement('div');
+        profile.className = 'review-profile';
+
+        const heading = document.createElement('h3');
+        heading.textContent = name;
+
+        const stars = document.createElement('div');
+        stars.className = 'review-stars';
+        stars.textContent = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+
+        const paragraph = document.createElement('p');
+        paragraph.textContent = '"' + review + '"';
+
+        const date = document.createElement('span');
+        date.className = 'review-date';
+        date.textContent = 'Just now · Visitor review';
+
+        const avatar = document.createElement('div');
+        avatar.style.cssText = 'width:55px;height:55px;border-radius:50%;background:#59402c;display:grid;place-items:center;color:#e5c28d;font-size:22px;';
+        avatar.textContent = name.charAt(0).toUpperCase();
+
+        profile.append(avatar, heading);
+        card.append(profile, stars, paragraph, date);
+
+        document.getElementById('reviewGrid').prepend(card);
+
+        document.getElementById('reviewMessage').textContent =
+            '✨ Thank you for sharing your experience!';
+
+        this.reset();
+    });
+</script>
+
+</body>
+</html>

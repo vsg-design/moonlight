@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Moonlight Café</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .story-page {
+            background: #160f0c;
+            color: #f5e8d5;
+            font-family: 'Poppins', sans-serif;
+        }
+        .story-hero {
+            min-height: 65vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(#160f0c88,#160f0cbb),
+            url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1600') center/cover;
+        }
+        .story-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px,7vw,76px);
+            color: #e5c28d;
+            margin-bottom: 15px;
+        }
+        .story-hero p {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.9;
+        }
+        .story-section {
+            max-width: 1150px;
+            margin: auto;
+            padding: 90px 25px;
+        }
+        .story-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(30px,4vw,45px);
+            color: #dfbd8a;
+            margin-bottom: 20px;
+        }
+        .story-section p {
+            color: #d2c2ae;
+            line-height: 2;
+            margin-bottom: 18px;
+        }
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 50px;
+            align-items: center;
+        }
+        .story-grid img {
+            width: 100%;
+            height: 390px;
+            object-fit: cover;
+            border-radius: 14px;
+        }
+        .story-card-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+            margin-top: 35px;
+        }
+        .story-card {
+            background: #251914;
+            padding: 32px;
+            border: 1px solid #59402c;
+            border-radius: 12px;
+            transition: .3s;
+        }
+        .story-card:hover {
+            transform: translateY(-8px);
+            border-color: #d6ae78;
+        }
+        .story-card h3 {
+            color: #e5c28d;
+            font-family: 'Playfair Display',serif;
+            margin-bottom: 15px;
+        }
+        .story-highlight {
+            text-align: center;
+            background: #241711;
+            padding: 75px 25px;
+        }
+        .story-highlight h2 {
+            font-family: 'Playfair Display',serif;
+            color: #e5c28d;
+            font-size: 40px;
+        }
+        .story-highlight p {
+            max-width: 700px;
+            margin: 20px auto;
+            line-height: 2;
+            color: #d2c2ae;
+        }
+        .story-team {
+            text-align: center;
+        }
+        @media(max-width:700px) {
+            .story-grid,.story-card-grid {
+                grid-template-columns: 1fr;
+            }
+            .story-section {
+                padding: 60px 20px;
+            }
+            .story-grid img {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body class="story-page">
+
+<header>
+    <div class="logo">Moonlight <span>Café</span></div>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">Our Story</a>
+        <a href="review.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="reservation.html">Reservations</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
+</header>
+
+<section class="story-hero">
+    <div>
+        <h1>Our Story</h1>
+        <p>Every cup has a story. Every corner holds a memory.
+        Welcome to Moonlight Café, where little moments become beautiful memories.</p>
+    </div>
+</section>
+
+<section class="story-section">
+    <div class="story-grid">
+        <div>
+            <h2>A Little Place, A Big Dream</h2>
+            <p>Moonlight Café was imagined as more than just a coffee shop. It is a place where people can slow down, enjoy a warm cup of coffee and forget about the rush of everyday life.</p>
+            <p>Inspired by peaceful evenings, warm lights and meaningful conversations, we created a space that feels comfortable, welcoming and special.</p>
+            <p>Whether you visit us alone or with your favourite people, there is always a place for you here.</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=900" alt="Warm and welcoming café interior">
+    </div>
+</section>
+
+<section class="story-highlight">
+    <h2>More Than Just Coffee</h2>
+    <p>We believe the best café experiences are not only about what is served on the table. They are about the atmosphere, the people, the conversations and the memories created along the way.</p>
+</section>
+
+<section class="story-section">
+    <h2>What Makes Us Special?</h2>
+    <div class="story-card-grid">
+        <div class="story-card">
+            <h3>☕ Crafted With Care</h3>
+            <p>Every drink is prepared with attention and care, making every visit a little more special.</p>
+        </div>
+        <div class="story-card">
+            <h3>🌙 A Cozy Atmosphere</h3>
+            <p>Warm lighting, beautiful interiors and a peaceful environment make our café feel like home.</p>
+        </div>
+        <div class="story-card">
+            <h3>♡ Made For Memories</h3>
+            <p>From friendly meetups to quiet evenings, we love being part of your special moments.</p>
+        </div>
+    </div>
+</section>
+
+<section class="story-section">
+    <div class="story-grid">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900" alt="Freshly prepared coffee">
+        <div>
+            <h2>Our Love For Coffee</h2>
+            <p>For us, coffee is a little ritual. The aroma of freshly prepared coffee, the first sip of a favourite drink and the comfort of a familiar place can turn an ordinary day into something memorable.</p>
+            <p>We want every guest to find a favourite flavour and a reason to return.</p>
+        </div>
+    </div>
+</section>
+
+<section class="story-section story-team">
+    <h2>A Place For Everyone</h2>
+    <p>Moonlight Café is built around a simple idea: everyone deserves a welcoming place to relax, connect and enjoy the little things.</p>
+    <p>Thank you for being part of our story. We cannot wait to create more memories with you.</p>
+</section>
+
+<footer style="text-align:center;padding:35px;background:#0e0907;color:#c9aa80;">
+    <h2 style="font-family:'Playfair Display',serif;">Moonlight Café ☾</h2>
+    <p>Where every cup feels like home.</p>
+    <p>© 2026 Moonlight Café. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

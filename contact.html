@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Moonlight Café</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        .contact-page {
+            background: #160f0c;
+            color: #f5e8d5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-hero {
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(#160f0c88,#160f0cbb),
+            url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600') center/cover;
+        }
+
+        .contact-hero h1 {
+            font-family: 'Playfair Display',serif;
+            font-size: clamp(42px,7vw,75px);
+            color: #e5c28d;
+        }
+
+        .contact-hero p {
+            max-width: 600px;
+            line-height: 1.9;
+            margin: 15px auto;
+        }
+
+        .contact-container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 85px 25px;
+        }
+
+        .contact-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .contact-heading h2 {
+            font-family: 'Playfair Display',serif;
+            font-size: 40px;
+            color: #e5c28d;
+        }
+
+        .contact-heading p {
+            color: #cbb9a5;
+            margin-top: 12px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 35px;
+        }
+
+        .contact-info, .contact-form {
+            background: #251914;
+            border: 1px solid #59402c;
+            border-radius: 15px;
+            padding: 35px;
+        }
+
+        .contact-info h3, .contact-form h3 {
+            font-family: 'Playfair Display',serif;
+            color: #e5c28d;
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            margin-bottom: 28px;
+        }
+
+        .info-item h4 {
+            color: #e5c28d;
+            margin-bottom: 7px;
+        }
+
+        .info-item p {
+            color: #cbb9a5;
+            line-height: 1.8;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 18px;
+            background: #160f0c;
+            border: 1px solid #72563b;
+            border-radius: 8px;
+            color: #fff;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #e5c28d;
+        }
+
+        .contact-form textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            background: #c49a65;
+            color: #160f0c;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .contact-form button:hover {
+            background: #e5c28d;
+            transform: translateY(-3px);
+        }
+
+        .contact-hours {
+            background: #21150f;
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        .contact-hours h2 {
+            font-family: 'Playfair Display',serif;
+            color: #e5c28d;
+            font-size: 38px;
+        }
+
+        .hours-list {
+            max-width: 500px;
+            margin: 30px auto;
+        }
+
+        .hours-list div {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 5px;
+            border-bottom: 1px solid #59402c;
+            color: #d2c2ae;
+            gap: 15px;
+        }
+
+        .contact-quote {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .contact-quote h2 {
+            color: #e5c28d;
+            font-family: 'Playfair Display',serif;
+            font-size: 35px;
+        }
+
+        .contact-quote p {
+            color: #cbb9a5;
+            margin-top: 15px;
+        }
+
+        @media(max-width:750px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                padding: 55px 18px;
+            }
+
+            .contact-info, .contact-form {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body class="contact-page">
+
+<header>
+    <div class="logo">Moonlight <span>Café</span></div>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">Our Story</a>
+        <a href="review.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="reservation.html">Reservations</a>
+    </nav>
+
+    <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
+</header>
+
+<section class="contact-hero">
+    <div>
+        <h1>Get In Touch</h1>
+        <p>We would love to hear from you. Have a question, suggestion or just want to say hello? Our doors and inbox are always open.</p>
+    </div>
+</section>
+
+<section class="contact-container">
+
+    <div class="contact-heading">
+        <h2>Let's Connect</h2>
+        <p>Every beautiful conversation starts somewhere.</p>
+    </div>
+
+    <div class="contact-grid">
+
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+
+            <div class="info-item">
+                <h4>📍 Visit Us</h4>
+                <p>Moonlight Café<br>Your City, India</p>
+            </div>
+
+            <div class="info-item">
+                <h4>📞 Call Us</h4>
+                <p>+91 XXXXX XXXXX</p>
+            </div>
+
+            <div class="info-item">
+                <h4>✉ Email Us</h4>
+                <p>hello@moonlightcafe.com</p>
+            </div>
+
+            <div class="info-item">
+                <h4>♡ Follow Us</h4>
+                <p>Instagram · Facebook · Pinterest</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Send Us A Message</h3>
+
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+
+                <input type="email" placeholder="Your Email" required>
+
+                <input type="text" placeholder="Subject" required>
+
+                <textarea placeholder="Write your message here..." required></textarea>
+
+                <button type="submit">Send Message →</button>
+            </form>
+
+            <p id="formMessage" style="margin-top:15px;color:#e5c28d;"></p>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact-hours">
+    <h2>When Can You Find Us?</h2>
+    <p style="color:#cbb9a5;margin-top:12px;">Come by and spend a little time with us.</p>
+
+    <div class="hours-list">
+        <div><span>Monday – Friday</span><span>9 AM – 10 PM</span></div>
+        <div><span>Saturday</span><span>9 AM – 11 PM</span></div>
+        <div><span>Sunday</span><span>10 AM – 10 PM</span></div>
+    </div>
+</section>
+
+<section class="contact-quote">
+    <h2>We Can't Wait To See You!</h2>
+    <p>Until then, keep sipping, smiling and making memories. ☕</p>
+</section>
+
+<footer style="text-align:center;padding:35px;background:#0e0907;color:#c9aa80;">
+    <h2 style="font-family:'Playfair Display',serif;">Moonlight Café ☾</h2>
+    <p>Where every cup feels like home.</p>
+    <p>© 2026 Moonlight Café. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('formMessage').textContent =
+            'Thank you for reaching out! Your demo message has been received.';
+        this.reset();
+    });
+</script>
+
+</body>
+</html>

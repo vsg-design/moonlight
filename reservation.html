@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations | Moonlight Café</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        .reservation-page {
+            background: #160f0c;
+            color: #f5e8d5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .reservation-hero {
+            min-height: 52vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(#160f0c88,#160f0cbb),
+            url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600') center/cover;
+        }
+
+        .reservation-hero h1 {
+            font-family: 'Playfair Display',serif;
+            font-size: clamp(42px,7vw,75px);
+            color: #e5c28d;
+        }
+
+        .reservation-hero p {
+            max-width: 600px;
+            margin: 15px auto;
+            line-height: 1.9;
+        }
+
+        .reservation-container {
+            max-width: 1050px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        .reservation-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .reservation-heading h2 {
+            font-family: 'Playfair Display',serif;
+            font-size: 40px;
+            color: #e5c28d;
+        }
+
+        .reservation-heading p {
+            color: #cbb9a5;
+            margin-top: 12px;
+        }
+
+        .reservation-box {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            background: #251914;
+            border: 1px solid #59402c;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .reservation-side {
+            padding: 40px;
+            background: linear-gradient(#1b110dcc,#1b110dcc),
+            url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .reservation-side h3 {
+            font-family: 'Playfair Display',serif;
+            font-size: 32px;
+            color: #e5c28d;
+            margin-bottom: 20px;
+        }
+
+        .reservation-side p {
+            color: #eadcc9;
+            line-height: 2;
+        }
+
+        .reservation-form {
+            padding: 40px;
+        }
+
+        .reservation-form h3 {
+            font-family: 'Playfair Display',serif;
+            font-size: 27px;
+            color: #e5c28d;
+            margin-bottom: 25px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .reservation-form label {
+            display: block;
+            color: #d9c3a8;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .reservation-form input,
+        .reservation-form select,
+        .reservation-form textarea {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 20px;
+            background: #160f0c;
+            color: white;
+            border: 1px solid #72563b;
+            border-radius: 7px;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .reservation-form input:focus,
+        .reservation-form select:focus,
+        .reservation-form textarea:focus {
+            border-color: #e5c28d;
+        }
+
+        .reservation-form select option {
+            background: #160f0c;
+        }
+
+        .reservation-form textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .reservation-form button {
+            width: 100%;
+            padding: 15px;
+            background: #c49a65;
+            color: #160f0c;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .3s;
+            font-family: inherit;
+        }
+
+        .reservation-form button:hover {
+            background: #e5c28d;
+            transform: translateY(-3px);
+        }
+
+        .booking-message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #392b1d;
+            color: #e5c28d;
+            display: none;
+            line-height: 1.7;
+        }
+
+        .reservation-note {
+            text-align: center;
+            padding: 70px 20px;
+            background: #21150f;
+        }
+
+        .reservation-note h2 {
+            color: #e5c28d;
+            font-family: 'Playfair Display',serif;
+            font-size: 35px;
+        }
+
+        .reservation-note p {
+            color: #cbb9a5;
+            margin-top: 15px;
+            line-height: 1.9;
+        }
+
+        @media(max-width:750px) {
+            .reservation-box {
+                grid-template-columns: 1fr;
+            }
+
+            .reservation-side {
+                min-height: 260px;
+            }
+
+            .reservation-form {
+                padding: 25px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="reservation-page">
+
+<header>
+    <div class="logo">Moonlight <span>Café</span></div>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">Our Story</a>
+        <a href="review.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="reservation.html">Reservations</a>
+    </nav>
+
+    <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
+</header>
+
+<section class="reservation-hero">
+    <div>
+        <h1>Reserve Your Table</h1>
+        <p>A beautiful evening, delicious coffee and unforgettable memories are waiting for you.</p>
+    </div>
+</section>
+
+<section class="reservation-container">
+
+    <div class="reservation-heading">
+        <h2>Let's Save You A Seat</h2>
+        <p>Fill in your details and plan your next visit with us.</p>
+    </div>
+
+    <div class="reservation-box">
+
+        <div class="reservation-side">
+            <h3>Your Perfect Evening Awaits</h3>
+            <p>Whether it's a peaceful coffee date, a family dinner or a special celebration, Moonlight Café is ready to welcome you.</p>
+            <br>
+            <p>☕ Fresh coffee</p>
+            <p>♡ Cozy atmosphere</p>
+            <p>🌙 Beautiful memories</p>
+        </div>
+
+        <div class="reservation-form">
+            <h3>Booking Details</h3>
+
+            <form id="reservationForm">
+
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name" required>
+
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email" required>
+
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter your phone number"
+                    pattern="[0-9+\-\s]{7,15}" required>
+
+                <div class="form-row">
+                    <div>
+                        <label>Reservation Date</label>
+                        <input type="date" id="bookingDate" required>
+                    </div>
+
+                    <div>
+                        <label>Reservation Time</label>
+                        <select required>
+                            <option value="">Choose time</option>
+                            <option>10:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>12:00 PM</option>
+                            <option>01:00 PM</option>
+                            <option>02:00 PM</option>
+                            <option>03:00 PM</option>
+                            <option>04:00 PM</option>
+                            <option>05:00 PM</option>
+                            <option>06:00 PM</option>
+                            <option>07:00 PM</option>
+                            <option>08:00 PM</option>
+                            <option>09:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label>Number of Guests</label>
+                <select required>
+                    <option value="">Select guests</option>
+                    <option>1 Guest</option>
+                    <option>2 Guests</option>
+                    <option>3 Guests</option>
+                    <option>4 Guests</option>
+                    <option>5 Guests</option>
+                    <option>6 Guests</option>
+                    <option>7+ Guests</option>
+                </select>
+
+                <label>Special Requests</label>
+                <textarea placeholder="Any special requests? (Optional)"></textarea>
+
+                <button type="submit">Book My Table →</button>
+
+                <div class="booking-message" id="bookingMessage"></div>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="reservation-note">
+    <h2>Make Every Moment Special</h2>
+    <p>We look forward to welcoming you to Moonlight Café.<br>
+    Thank you for choosing us for your special moments.</p>
+</section>
+
+<footer style="text-align:center;padding:35px;background:#0e0907;color:#c9aa80;">
+    <h2 style="font-family:'Playfair Display',serif;">Moonlight Café ☾</h2>
+    <p>Where every cup feels like home.</p>
+    <p>© 2026 Moonlight Café. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+    const bookingDate = document.getElementById('bookingDate');
+
+    const today = new Date();
+    const localToday = new Date(
+        today.getTime() - today.getTimezoneOffset() * 60000
+    ).toISOString().split('T')[0];
+
+    bookingDate.min = localToday;
+
+    document.getElementById('reservationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const message = document.getElementById('bookingMessage');
+
+        message.style.display = 'block';
+        message.textContent =
+            '✨ Thank you! Your demo booking request has been received. Please contact the café to confirm your reservation.';
+
+        this.reset();
+        bookingDate.min = localToday;
+    });
+</script>
+
+</body>
+</html>

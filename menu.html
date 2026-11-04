@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#160f0d">
+    <title>Our Menu | Moonlight Café</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">☾ Moonlight <span>Café</span></a>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="about.html">Our Story</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="reservations.html">Reservations</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="reservations.html" class="nav-btn">Book a Table ↗</a>
+    <button class="menu-toggle" aria-label="Open navigation">☰</button>
+</header>
+
+
+<!-- MENU HERO -->
+<section class="menu-hero page-hero">
+    <div class="page-hero-content">
+        <div class="section-tag">A TASTE OF HAPPINESS</div>
+        <h1>Good food.<br><span>Beautiful moments.</span></h1>
+        <p>From your first morning coffee to your favourite evening dessert, discover something special in every bite.</p>
+        <a href="#full-menu" class="main-btn">Explore the Menu ↓</a>
+    </div>
+</section>
+
+
+<!-- MENU INTRO -->
+<section class="menu-intro section">
+    <div class="section-tag">MADE FRESH WITH LOVE</div>
+    <h2>A little something for <span>everyone.</span></h2>
+    <p>Carefully prepared favourites, comforting classics and delightful treats. Find your next favourite here.</p>
+</section>
+
+
+<!-- CATEGORY FILTERS -->
+<section class="menu-browser section" id="full-menu">
+
+    <div class="section-tag">EXPLORE OUR COLLECTION</div>
+    <h2>The Moonlight <span>Menu</span></h2>
+
+    <div class="menu-filters">
+        <button class="filter-btn active" data-filter="all">All Items</button>
+        <button class="filter-btn" data-filter="coffee">Coffee</button>
+        <button class="filter-btn" data-filter="cold">Cold Drinks</button>
+        <button class="filter-btn" data-filter="tea">Tea</button>
+        <button class="filter-btn" data-filter="dessert">Desserts</button>
+        <button class="filter-btn" data-filter="snacks">Snacks</button>
+    </div>
+
+    <div class="full-menu-grid">
+
+        <!-- COFFEE -->
+        <article class="menu-item" data-category="coffee">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600" alt="Cappuccino">
+            <div class="menu-item-info">
+                <span class="food-category">COFFEE</span>
+                <h3>Classic Cappuccino</h3>
+                <p>Rich espresso with silky steamed milk and soft foam.</p>
+                <strong>₹129</strong>
+            </div>
+        </article>
+
+        <article class="menu-item" data-category="coffee">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600" alt="Caramel latte">
+            <div class="menu-item-info">
+                <span class="food-category">COFFEE</span>
+                <h3>Caramel Latte</h3>
+                <p>Smooth espresso with creamy milk and caramel.</p>
+                <strong>₹149</strong>
+            </div>
+        </article>
+
+        <article class="menu-item" data-category="coffee">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600" alt="Espresso">
+            <div class="menu-item-info">
+                <span class="food-category">COFFEE</span>
+                <h3>Classic Espresso</h3>
+                <p>A bold and beautifully balanced coffee shot.</p>
+                <strong>₹99</strong>
+            </div>
+        </article>
+
+        <article class="menu-item" data-category="coffee">
+            <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=600" alt="Mocha">
+            <div class="menu-item-info">
+                <span class="food-category">COFFEE</span>
+                <h3>Chocolate Mocha</h3>
+                <p>Espresso blended with chocolate and creamy milk.</p>
+                <strong>₹159</strong>
+            </div>
+        </article>
+
+
+        <!-- COLD DRINKS -->
+        <article class="menu-item" data-category="cold">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600" alt="Iced coffee">
+            <div class="menu-item-info">
+                <span class="food-category">COLD DRINK</span>
+                <h3>Iced Coffee</h3>
+                <p>Refreshing chilled coffee with a creamy finish.</p>
+                <strong>₹139</strong>
+            </div>
+        </article>
+
+        <article class="menu-item" data-category="cold">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600" alt="Cold latte">
+            <div class="menu-item-info">
+                <span class="food-category">COLD DRINK</span>
+                <h3>Iced Caramel Latte</h3>
+                <p>Cold milk, coffee and a sweet caramel touch.</p>
+                <strong>₹159</strong>
+            </div>
+        </article>
+
+        <article class="menu-item" data-category="cold">
+            <img src="https://images.unsplash.com/photo-1546173159-315724a31696?w=600" alt="Fruit cooler">
+            <div class="menu-item-info">
+                <span class="food-category">COLD DRINK</span>
+                <h3>Berry Cooler</h3>
+                <p>A fruity and refreshing chilled drink.</p>
+                <strong>₹149</strong>
+            </div>
+        </article>
+
+
+        <!-- TEA -->
+        <article class="menu-item" data-category="tea">
+            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600" alt="Tea">
+            <div class="menu-item-info">
+                <span class="food-category">TEA</span>
+                <h3>Classic Masala Chai</h3>
+                <p>Comforting Indian tea with aromatic spices.</p>
+                <strong>₹79</strong>
+            </div>
+        </article>
+
+        <article class="menu-item" data-category="tea">
+            <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600" alt="Green tea">
+            <div class="menu-item-info">
+                <span class="food-category">TEA</span>
+                <h3>Green Tea</h3>
+                <p>A light and soothing cup of freshly brewed tea.</p>
+                <strong>₹89</strong>
+            </div>
+        </article>
+
+
+        <!-- DESSERTS -->
+        <article class="menu-item" data-category="dessert">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600" alt="Chocolate cake">
+            <div class="menu-item-info">
+                <span class="food-category">DESSERT</span>
+                <h3>Chocolate Cake</h3>
+                <p>Rich chocolate layers with a smooth frosting.</p>
+                <strong>₹179</strong>
+            </div>
+        </article>
+
+        <article class="menu-item" data-category="dessert">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600" alt="Strawberry dessert">
+            <div class="menu-item-info">
+                <span class="food-category">DESSERT</span>
+                <h3>Strawberry Delight</h3>
+                <p>A lovely sweet treat with a fruity flavour.</p>
+                <strong>₹169</strong>
+            </div>
+        </article>
+
+        <article class="menu-item" data-category="dessert">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600" alt="Croissant">
+            <div class="menu-item-info">
+                <span class="food-category">DESSERT</span>
+                <h3>Butter Croissant</h3>
+                <p>Golden, flaky and freshly baked.</p>
+                <strong>₹119</strong>
+            </div>
+        </article>
+
+
+        <!-- SNACKS -->
+        <article class="menu-item" data-category="snacks">
+            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=600" alt="Sandwich">
+            <div class="menu-item-info">
+                <span class="food-category">SNACK</span>
+                <h3>Grilled Sandwich</h3>
+                <p>Toasted bread filled with delicious ingredients.</p>
+                <strong>₹139</strong>
+            </div>
+        </article>
+
+        <article class="menu-item" data-category="snacks">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600" alt="French fries">
+            <div class="menu-item-info">
+                <span class="food-category">SNACK</span>
+                <h3>Crispy Fries</h3>
+                <p>Golden crispy fries served with a dip.</p>
+                <strong>₹99</strong>
+            </div>
+        </article>
+
+        <article class="menu-item" data-category="snacks">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600" alt="Pizza">
+            <div class="menu-item-info">
+                <span class="food-category">SNACK</span>
+                <h3>Mini Pizza</h3>
+                <p>A cheesy little favourite for every mood.</p>
+                <strong>₹189</strong>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+<!-- SPECIAL MESSAGE -->
+<section class="menu-message section">
+    <div class="section-tag">SOMETHING FOR YOUR SOUL</div>
+    <h2>Every craving deserves <span>a little love.</span></h2>
+    <p>Come in, find your favourite and make yourself at home.</p>
+    <a href="reservations.html" class="main-btn">Plan Your Visit ↗</a>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-main">
+
+        <div class="footer-brand">
+            <a href="index.html" class="logo">☾ Moonlight Café</a>
+            <p>A little magic in every cup.<br>A little warmth in every moment.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Explore</h3>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Our Menu</a>
+            <a href="about.html">Our Story</a>
+            <a href="reviews.html">Reviews</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Visit Us</h3>
+            <a href="reservations.html">Reservations</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Follow Along</h3>
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+            <a href="#">Facebook</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Moonlight Café. Made with ♡</p>
+        <p>Where every sip feels like magic. ☾</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
