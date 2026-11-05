@@ -47,7 +47,7 @@ if ("IntersectionObserver" in window) {
             }
         });
     }, {
-        threshold: 0.12
+        threshold: 0
     });
 
     revealElements.forEach(element => {
